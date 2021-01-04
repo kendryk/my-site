@@ -1,0 +1,40 @@
+Evaluation module 5
+WordPress
+Tâches à réaliser
+Développer un thème WordPress pour un site internet. Vous êtes libre de choisir entre ces deux options pour le sujet du site internet :
+Portfolio : Création de votre portfolio.
+Autre : Vous choisissez le sujet que vous souhaitez (site perso, site pour un ami / membre de la famille...).
+
+Dans tous les cas, votre thème devra utiliser les fonctionnalités suivantes de WordPress :
+[ ] Identité du site administrable (nom, logo, couleurs de fond).
+[ ] Gestion d’actualités.
+[ ] Page de contact avec formulaire.
+[ ] Gestion des menus (au moins un menu principal et un menu secondaire).
+[ ] Gestion des sidebars (au moins une sidebar dans le footer pour pouvoir y placer des widgets).
+[ ] Gestion d’au moins 2 CPT
+[ ] Gestion d’au moins 1 taxonomie
+[ ] Utilisation de Custom Fields au moins sur les CPT
+
+## Idées de contenus portfolio
+
+Si vous choisissez de réaliser votre portfolio, voici quelques idées de contenus à intégrer :
+
+ ] Affichage des projets réalisés organisés par catégories.
+
+ Utiliser éventuellement la librairie JS isotope pour les afficher côté front.
+
+[ ] Affichage de la liste des services que vous proposez
+(développement de site internet, appli mobile, référencement...).
+
+[ ]  Possibilité de télécharger votre CV.
+
+[ ]  Affichage de témoignages clients.
+
+[ ]  Liste des réseaux sociaux.
+
+Vous pouvez vous inspirer de  ces templates :
+https://themeforest.net/category/site-templates/personal
+Information complémentaires
+Vous êtes libre de choisir d’utiliser ou non un starter theme.
+Votre interface d’administration doit être pensée pour être la plus simple possible.
+Vous ne serez pas noté sur la partie design de votre site internet. Vous pouvez faire le choix d’utiliser un framework CSS si vous souhaitez gagner du temps sur ce point.

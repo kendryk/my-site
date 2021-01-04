@@ -1,9 +1,5 @@
-<?php
-
-get_header(); ?>
+<?php get_header(); ?>
     <div class="container-fluid">
-
-
 
     <main class="container-fluid my-5  ">
         <section class="row my-5 text-center ">
@@ -39,6 +35,4 @@ get_header(); ?>
         </section>
     </main>
     </div>
-<?php
-
-get_footer();
+<?php get_footer();

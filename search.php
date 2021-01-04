@@ -5,13 +5,28 @@
         <h1>Vos Recherches:</h1>
         <?php if (have_posts()) :  ?>
 
-        <section class="row row-cols-1 row-cols-md-4 g-4">
+        <section class="border">
 
             <?php  while (have_posts()) : the_post(); ?>
 
+                <article class="col">
+                    <div class="d-flex">
+                        <div>
+                        <div class="card-body">
+                            <h3 class="card-title"><?php the_title(); ?></h3>
+                            <?php the_excerpt(); ?>
+                        </div>
 
-                <?php get_template_part('template-parts/content', get_post_type()); ?>
-                </br>
+
+                        <div class="card-footer d-flex justify-content-end">
+                            <a href="<?php the_permalink(); ?>" class="btn btn-primary">
+                                Voir plus
+                            </a>
+                        </div>
+                    </div>
+
+                    </div>
+                </article>
 
             <?php endwhile; else : ?>
 

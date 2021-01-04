@@ -12,3 +12,181 @@ Text Domain: monsite
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+.header-picture {
+    background: #444  center / cover no-repeat ;
+    background-blend-mode: overlay;
+    color: white;
+}
+
+
+
+/*-----------------------------blog service*/
+.service_area {
+    background: #011135;
+    padding: 4rem 1rem;
+    color: lightyellow;
+}
+
+.single_service{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin: 0.5rem;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.single_service_title {
+    color: #a9abea;
+    font-weight: bold;
+}
+
+.icon{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    padding-left: 5px;
+    font-size: 68px;
+}
+.img_icon{
+    width: 60px;
+    height: 60px;
+}
+
+
+/*------content card--*/
+.picture-thumbnail{
+    background: center / cover no-repeat;
+    width: 100px;
+    height: 100%;
+}
+
+.picture-thumbnail-single{
+    background: center / cover no-repeat;
+    padding: 40%;
+    margin-bottom: 2rem;
+}
+
+
+/*-----------------------------single page project*/
+.service_project{
+    background:  white;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    color: darkblue;
+}
+.picture {
+    padding: 0 2rem ;
+
+}
+.picture_size {
+    max-width: 100%;
+}
+
+.picture_size_50 {
+    max-width: 50%;
+
+}
+/*------CONTACT*/
+
+.contact-form {
+    background: #ffffff;
+    border: 0;
+    border-bottom: 1px solid darkblue ;
+    font-size: 1.3rem;
+    color: #333;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.img_style{
+    width: 300px;
+}
+
+/*  TAXONOMY */
+
+.img_size{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    width: 125px;
+}
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)}
+    to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
