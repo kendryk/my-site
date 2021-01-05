@@ -37,10 +37,32 @@ function projects_cpt_init(){
 			'items_list_navigation' => _x( 'Navigation liste des projects', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'monsite' ),
 			'items_list'            => _x( 'Liste des projects', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'monsite' ),
 		],
+
+        'label'               => __('project', 'monsite'),
+        'description'         => __('Mes projets', 'monsite'),
+        'taxonomies'          => array('type'),
+        'hierarchical'        => false,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 20,
+        'can_export'          => true,
+        'exclude_from_search' => true,
+        'publicly_queryable'  => true,
+        'query_var'           => 'project',
+        'capability_type'     => 'page',
+
+
 		'menu_icon' => 'dashicons-html',
 		'public' => true,
 		'has_archive' => true,
-		'rewrite' => ['slug' => 'project'],
+		'rewrite' => [
+		        'slug' => 'project',
+                'with_front'          => true,
+                'pages'               => false,
+                'feeds'               => false,
+            ],
 		'supports' => [
 		    'title',
 		    'editor',
@@ -69,7 +91,7 @@ function project_register_fields() {
     Container::make('post_meta', 'Infos project')
         ->where('post_type', '=', 'project') // Le groupe de champs est affiché sur les projects
         ->add_fields([
-            Field::make('complex', 'crb_slides', 'Slides')
+            Field::make('complex', 'crb_slides', 'Slides images')
                 ->set_layout( 'tabbed-horizontal' )
                 ->add_fields( [
                     Field::make( 'image', 'image', 'Image' ),
@@ -95,4 +117,44 @@ function project_register_fields() {
 
         ])
     ;
+
+    Block::make( __( 'Gutenberg Block' ) )
+        ->add_fields( array(
+            Field::make( 'text', 'heading', __( 'Block Heading' ) ),
+            Field::make( 'rich_text', 'content', __( 'Block Content' ) ),
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            ?>
+
+            <div class="block">
+                <div class="block__heading">
+                    <h3><?= esc_html( $fields['heading'] ); ?></h3>
+                </div><!-- /.block__heading -->
+
+
+                <div class="block__content">
+                    <?=apply_filters( 'the_content', $fields['content'] ); ?>
+                </div><!-- /.block__content -->
+            </div><!-- /.block -->
+
+            <?php $query =new WP_Query([
+                'post_type'=> 'project',
+                'orderby' => 'date',
+                'order' => 'DESC',
+                'posts_per_page'=> -1
+            ]); ?>
+
+                <?php while($query->have_posts()) : $query->the_post(); ?>
+
+                    <?php get_template_part('template-parts/content/content_card', get_post_type()); ?>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); // A mettre après une boucle avec WP_Query ?>
+
+
+            <?php
+
+        } );
+
+
+
 }

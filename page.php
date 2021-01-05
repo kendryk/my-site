@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-PAGE
 
 <div class=" py-3 bg-light">
     <main class="container  ">

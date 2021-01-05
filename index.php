@@ -2,8 +2,10 @@
 
 INDEX
 
+
 <div class=" py-3 bg-light">
     <main class="container  ">
+
 
         <?php if (have_posts()) :  ?>
             <?php  while (have_posts()) : the_post(); ?>

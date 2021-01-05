@@ -53,7 +53,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
     width: 60px;
     height: 60px;
 }
-
+.img_icon2{
+    width: 100px;
+    height: 100px;
+}
 
 /*------content card--*/
 .picture-thumbnail{
@@ -88,6 +91,39 @@ Use it to make something cool, have fun, and share what you've learned with othe
     max-width: 50%;
 
 }
+/*-----------------------------single page testimonial*/
+.service_testimonial{
+    background:  #011135;
+    color: white;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+
+}
+.testimonials-elem {
+    background: white;
+    border-radius: 5px;
+    padding: 2rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+.testimonial-elem-profil p {
+    color: black;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.testimonials-elem-text {
+    color: black;
+    padding: 0 2rem;
+}
+
+
+.testimonial-elem-profil img {
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+
+}
+
 /*------CONTACT*/
 
 .contact-form {
@@ -189,4 +225,55 @@ Use it to make something cool, have fun, and share what you've learned with othe
     .modal-content {
         width: 100%;
     }
+}
+
+
+/*slick*/
+.slick-arrow::before {
+    color: #0a58ca;
+}
+
+.slick-slide{
+    margin: 1rem;
+}
+
+
+/*experience page*/
+
+.experience{
+    background: #f0f0f0;
+    box-shadow: -7px -7px 17px rgba(70, 70, 70, 0.06),
+    7px 7px 17px rgba(70, 70, 70, 0.12);
+    transition: all 0.2s;
+    display: flex;
+    margin: 2rem;
+    padding-left: 1rem;
+
+}
+.experience:hover {
+    box-shadow: inset -7px -7px 17px rgba(255, 255, 255, 0.6),
+    inset 7px 7px 17px rgba(70, 70, 70, 0.12);
+}
+
+
+.timeline{
+    align-self: center;
+    color: #999;
+    min-width: 11rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+.content{
+    border-left: 1px solid #ddd;
+
+    margin: 1rem 0 1rem 1rem;
+    padding: 1rem 2rem 1rem 1rem ;
+}
+.myExcerpt p{
+    margin-bottom: 2rem;
+    color: #9b9b9b;
+
+}
+.myContent p{
+
 }

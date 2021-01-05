@@ -5,10 +5,13 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 require_once( 'vendor/autoload.php' );
+//cpt
+require_once __DIR__ . '/cpt/experience.php';
 require_once __DIR__ . '/cpt/langages.php';
 require_once __DIR__ . '/cpt/testimony.php';
 require_once __DIR__ . '/cpt/project.php';
 require_once __DIR__ . '/cpt/service.php';
+//widgets
 require_once __DIR__ . '/Widgets/ContactWidget.php';
 
 
@@ -60,9 +63,13 @@ add_action('wp_enqueue_scripts', 'monsite_enqueue_styles');
 function monsite_enqueue_styles() {
     // Chargement des CSS
         wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css');
-        wp_enqueue_style('theme-style',
+        wp_enqueue_style('slick-css', get_template_directory_uri() . '/slick/slick.css');
+        wp_enqueue_style('slick-theme-css', get_template_directory_uri() . '/slick/slick-theme.css', ['slick-css']);
+        wp_enqueue_style('fontawesome-css', get_template_directory_uri() . '/fontawesome/css/all.css', ['slick-css']);
+
+       wp_enqueue_style('theme-style',
             get_template_directory_uri() . '/style.css',
-            ['bootstrap-css'],
+            ['bootstrap-css', 'slick-css', 'slick-theme-css'],
             wp_get_theme()->get('Version')
         );
         //----Autre Chargement!!
@@ -110,6 +117,7 @@ function monsite_add_theme_support() {
     add_theme_support('post-thumbnails'); // Activer les images à la une
     add_theme_support('custom-header'); // Activer la personnalisation de l'image du header
     add_theme_support('editor-color-palette'); // Activer la coloration
+    add_theme_support('custom-background'); // Activer la coloration
 }
 
 /**
@@ -119,6 +127,7 @@ add_action('after_setup_theme', 'monsite_add_image_sizes');
 function monsite_add_image_sizes() {
     add_image_size('card', 268,150,true);
     add_image_size('imgag', 50,50,true);
+    add_image_size('profil', 150,150,true);
 }
 
 /**

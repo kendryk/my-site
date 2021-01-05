@@ -56,12 +56,12 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section_title mb-3">
-                        <h3>Mes projets :</h3>
+                        <h3>Mes derniers projets :</h3>
                     </div>
                 </div>
             </div>
 
-            <section id="last-Project" class="row">
+            <section id="last-Projects">
                     <!-- Afficher la liste des derniers Projects -->
 <!--                todo ajouter un slide sur la liste des projets-->
                     <?php
@@ -69,7 +69,7 @@
                         'post_type' => 'project',
                         'orderby' => 'date',
                         'order' => 'DESC',
-                        'posts_per_page' => 2
+                        'posts_per_page' => 6
 
                     ]);
                     ?>
@@ -81,8 +81,44 @@
         </div>
     </div>
 
+<!--        les témoignages-->
+        <div class="service_testimonial">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="section_title mb-3">
+                            <h2>Les témoignages :</h2>
+                        </div>
+                    </div>
+                </div>
 
+                    <section id="testimonies" ">
+                        <!-- Afficher la liste des derniers articles -->
+                        <?php
+                        $query = new WP_Query([
+                            'post_type' => 'testimony',
+                            'posts_per_page' => -1
+                        ]);
+                        ?>
 
+                        <?php while($query->have_posts()) : $query->the_post(); ?>
+                            <article class="testimonials-elem d-flex ">
+                                <div class="testimonial-elem-profil ">
+                                    <?php the_post_thumbnail('profil', ); ?>
+                                </div>
+
+                                <div class="testimonials-elem-text ">
+                                        <h3><?php the_title(); ?></h3>
+                                        <?php the_content(); ?>
+                                </div>
+
+                            </article>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); // A mettre après une boucle avec WP_Query ?>
+                    </section>
+
+            </div>
+        </div>
         <!-- ajout de la sidebar -->
 
         <aside >

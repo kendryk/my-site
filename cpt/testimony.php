@@ -45,19 +45,84 @@ function testimonies_cpt_init(){
 		    'title',
 		    'editor',
             'thumbnail',
-
-
-
-
         ],
 	]);
+    // Ajouter une taxonomie pour organiser les employees par métiers
+    register_taxonomy('job', ['employee'], [
+        'label' => 'Métier',
+        'rewrite' => ['slug' => 'métier'],
+        'hierarchical' => true
+    ]);
+
+}
+
+/**
+ * Ajouter des champs personnalisé (Custom Fields) sur les testimony
+ */
+add_action('carbon_fields_register_fields', 'social_register_fields');
+function social_register_fields() {
+
+
+    Block::make( __( 'Gutenberg social Block' ) )
+        ->add_fields( array(
+            Field::make( 'text', 'heading', __( 'Block Heading' ) ),
+            Field::make( 'rich_text', 'content', __( 'Block Content' ) ),
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            ?>
+
+            <div class="block">
+                <div class="block__heading">
+                    <h3><?= esc_html( $fields['heading'] ); ?></h3>
+                </div><!-- /.block__heading -->
+
+
+                <div class="block__content">
+                    <?=apply_filters( 'the_content', $fields['content'] ); ?>
+                </div><!-- /.block__content -->
+            </div><!-- /.block -->
+
+            <?php $query =new WP_Query([
+                'post_type'=> 'testimony',
+                'orderby' => 'date',
+                'order' => 'DESC',
+                'posts_per_page'=> -1
+            ]); ?>
+            <div class=" d-flex">
+            <div class=" col-8 row">
+            <?php while($query->have_posts()) : $query->the_post(); ?>
+
+                <div class=" single_service d-flex">
+
+                        <div class=" icon">
+                            <img class="img_icon2"  src="<?php the_post_thumbnail_url(); ?>" alt="">
+                        </div>
+                        <div class=" text-center m-auto" >
+                        <div class=" mx-2">
+                            <h4><?php the_title(); ?></h4>
+                        </div>
+                        <div class="mx-2 px-2 ">
+                            <?php the_content(); ?>
+                        </div>
+                        </div>
+
+                </div>
 
 
 
 
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); // A mettre après une boucle avec WP_Query ?>
+            </div>
+
+            <aside class=" col-4 ">
+                <?php   comments_template(); ?>
+            </aside>
+            </div>
+            <?php
+
+        } );
 
 
 
 }
-
-

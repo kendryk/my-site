@@ -9,15 +9,12 @@
 
             <!-- Grid column -->
             <div class="col mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold"><?php the_title(); ?></h6>
-
+               <?php the_custom_logo(); ?>
             </div>
 
                 <?php if (is_active_sidebar('footer-sidebar')): ?>
                     <?php dynamic_sidebar('footer-sidebar'); ?>
                 <?php endif; ?>
-
-
 
 
 
@@ -33,11 +30,13 @@
             <div class="col-md-7 col-lg-8">
 
                 <!--Copyright-->
-                <p class="text-center text-md-left">© 2020 Copyright:
+                <p class="text-center text-md-left">© <?= date('Y'); ?> Copyright:
                     <a href="">
-                        <strong> macecedric.com</strong>
+                        <strong>  <?php the_author(); ?>.com</strong>
                     </a>
                 </p>
+
+
 
             </div>
             <!-- Grid column -->
@@ -50,22 +49,22 @@
                     <ul class="list-unstyled list-inline">
                         <li class="list-inline-item">
                             <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fab fa-facebook-f"></i>FA
+                                <i class="fab fa-facebook-f"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fab fa-twitter"></i>TW
+                                <i class="fab fa-twitter"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fab fa-google-plus-g"></i>GG
+                                <i class="fab fa-google-plus-g"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fab fa-linkedin-in"></i>LI
+                                <i class="fab fa-linkedin-in"></i>
                             </a>
                         </li>
                     </ul>

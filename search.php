@@ -3,34 +3,48 @@
     <main class="container ">
 
         <h1>Vos Recherches:</h1>
+        <hr>
+        <hr>
         <?php if (have_posts()) :  ?>
 
-        <section class="border">
+        <section >
 
             <?php  while (have_posts()) : the_post(); ?>
 
-                <article class="col">
-                    <div class="d-flex">
-                        <div>
-                        <div class="card-body">
-                            <h3 class="card-title"><?php the_title(); ?></h3>
-                            <?php the_excerpt(); ?>
+                <div class="container mb-2">
+                    <div class="row ">
+                        <div class="col">
+                            <h3><?php the_title(); ?></h3>
+
                         </div>
 
-
-                        <div class="card-footer d-flex justify-content-end">
-                            <a href="<?php the_permalink(); ?>" class="btn btn-primary">
-                                Voir plus
-                            </a>
+                    </div>
+                    <div class="row ">
+                        <div class="col">
+                             <?php the_excerpt(); ?>
                         </div>
-                    </div>
+                        <div class="col">
+                            <a href="<?php the_permalink(); ?>"  class="btn btn-primary"> Voir plus</a>
+                        </div>
 
                     </div>
-                </article>
+                </div>
+                <hr>
+
+
+
+
+
+
+
+
+
+
 
             <?php endwhile; else : ?>
 
                 <p>Aucun Résultat</p>
+
 
             <?php endif; ?>
         </section>
