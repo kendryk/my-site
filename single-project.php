@@ -15,9 +15,9 @@ $langages = carbon_get_the_post_meta('langages');
 
                 <article class="row mt-5">
                     <section class=" title_content  col-4 ">
-                        <h1 class=" mb-3 "><?php the_title(); ?></h1>
+                        <h1 class="mb-3 "><?php the_title(); ?></h1>
                         <hr/>
-                        <h5>Les différents langages:</h5>
+                        <h5>Les différents langages et frameworks utilisé:</h5>
 
                         <?php foreach ($langages as $langage) : ?>
                             <?php $current_langage = get_post($langage['langage'][0]['id']); ?>
@@ -29,23 +29,50 @@ $langages = carbon_get_the_post_meta('langages');
 
 
                         <hr/>
-                        <h5>textes:</h5>
+                        <?php display_terms_btn(get_the_ID(), 'projectType'); ?>
+                        <hr/>
+
                         <p><?php the_content(); ?></p>
                         <hr/>
                             <!-- Mise en place des images -->
-                            <!--[X] ajouter si pas d'images
-                            todo : hover image agrandit.-->
+                            <!--[X]do ajouter si pas d'images
+                            do : hover image agrandit.-->
 
                         <?php if (empty($slides)) : ?>
                         <?php else : ?>
-                            <h5>Images:</h5>
+                            <h5>Quelques images:</h5>
+
                         <div class="picture-box ">
+
+                            <?php $i = 0; ?>
+
                             <?php foreach ( $slides as $slide ) {
+
                         $img_url = wp_get_attachment_image_src($slide['image'],$size = 'full');
                         $img_slide = $img_url[0];?>
-                            <div class="picture-thumbnail-single" style='background-image:url("<?= $img_slide ; ?>" )'>
-                            </div>
-                           <?php }; ?>
+
+                                <img id="myImg-<?= $i ; // Affichage de l'incrément ?>"
+                                     src="<?= $img_slide; ?>"
+                                     class="img_size"
+                                     alt="">
+
+                                <!-- The Modal -->
+                                <div id="myModal-<?= $i ; // Affichage de l'incrément ?>" class="modal">
+
+                                    <img class="modal-content" id="img01-<?= $i ; // Affichage de l'incrément ?>">
+                                    <div class="caption" id="caption-<?= $i ; // Affichage de l'incrément ?>"></div>
+
+                                <!-- Pied de page modal -->
+                                <div  class = "modal-footer" >
+                                    <button  id="button-<?= $i ; // Affichage de l'incrément ?>"
+                                             type = "button"
+                                             class = "btn btn-danger fermeture"
+                                    > Fermer
+                                    </button >
+                                </div >
+                                </div>
+                           <?php $i ++;
+                            }; ?>
 
                         </div>
 

@@ -38,21 +38,6 @@ function projects_cpt_init(){
 			'items_list'            => _x( 'Liste des projects', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'monsite' ),
 		],
 
-        'label'               => __('project', 'monsite'),
-        'description'         => __('Mes projets', 'monsite'),
-        'taxonomies'          => array('type'),
-        'hierarchical'        => false,
-        'show_ui'             => true,
-        'show_in_menu'        => true,
-        'show_in_nav_menus'   => true,
-        'show_in_admin_bar'   => true,
-        'menu_position'       => 20,
-        'can_export'          => true,
-        'exclude_from_search' => true,
-        'publicly_queryable'  => true,
-        'query_var'           => 'project',
-        'capability_type'     => 'page',
-
 
 		'menu_icon' => 'dashicons-html',
 		'public' => true,
@@ -81,6 +66,11 @@ function projects_cpt_init(){
 
 
 }
+
+
+
+
+
 
 
 /**
@@ -137,20 +127,56 @@ function project_register_fields() {
                 </div><!-- /.block__content -->
             </div><!-- /.block -->
 
-            <?php $query =new WP_Query([
+            <?php $project =new WP_Query([
                 'post_type'=> 'project',
                 'orderby' => 'date',
                 'order' => 'DESC',
                 'posts_per_page'=> -1
             ]); ?>
 
-                <?php while($query->have_posts()) : $query->the_post(); ?>
 
-                    <?php get_template_part('template-parts/content/content_card', get_post_type()); ?>
+            <div class="button-group filter-button-group">
+                <button data-filter="*" class="btn btn-success">show all</button>
+
+            <?php
+                $types = get_terms([ 'taxonomy' => 'projectType','hide_empty' => false ]);?>
+
+                <?php foreach( $types as $type ): ?>
+
+                <button data-filter=".<?=$type->slug; ?>"  class="btn btn-info"><?=$type->name; ?></button>
+
+                <?php endforeach; ?>
+
+            </div>
+
+            <div class="grid">
+                <?php while($project->have_posts()) : $project->the_post(); ?>
+
+                    <a class="grid-item <?php $types = get_the_terms(get_the_ID(),'projectType');
+                    foreach ($types as $type){
+                        echo$type->slug,' ';
+                    } ?>  " href="<?php the_permalink(); ?>">
+
+                        <div class="card m-2 text-center ">
+
+                            <div>
+                                <div class=" img-size p-5 mb-3"
+                                     style="background-image:url('<?php the_post_thumbnail_url(); ?>')">
+
+                                </div>
+                            </div>
+
+                            <h3><?php the_title(); ?></h3>
+                        </div>
+
+
+
+                    </a>
+
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); // A mettre après une boucle avec WP_Query ?>
 
-
+            </div>
             <?php
 
         } );

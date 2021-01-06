@@ -8,14 +8,15 @@
         <article class="row text-center text-md-left mt-3 pb-3">
 
             <!-- Grid column -->
-            <div class="col mx-auto mt-3">
+            <div class="col-2  mt-3">
                <?php the_custom_logo(); ?>
             </div>
 
+            <div class="col-10 d-flex justify-content-end ">
                 <?php if (is_active_sidebar('footer-sidebar')): ?>
                     <?php dynamic_sidebar('footer-sidebar'); ?>
                 <?php endif; ?>
-
+            </div>
 
 
         </article>
@@ -45,30 +46,32 @@
             <div class="col-md-5 col-lg-4 ml-lg-0">
 
                 <!-- Social buttons -->
-                <div class="text-center text-md-right">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fab fa-facebook-f"></i>
+
+                <div class=" d-flex justify-content-end">
+
+                    <?php
+                        $social= new WP_Query([
+                            'post_type' => 'social_network',
+                            'order' => 'DESC',
+                        ]);
+                        ?>
+
+                    <?php while($social->have_posts()) : $social->the_post(); ?>
+                        <?php $social_networks = carbon_get_the_post_meta('social-networks'); ?>
+
+                        <?php foreach ($social_networks as $social_network) : ?>
+
+                            <a href=" <?= $social_network['url'];  ?>">
+                                <i class="<?= $social_network['icon']['class']; ?> mx-3"></i>
                             </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fab fa-google-plus-g"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                    </ul>
+                        <?php endforeach; ?>
+
+                    <?php endwhile; ?>
+                    <?php wp_reset_postdata(); // A mettre après une boucle avec WP_Query ?>
+
                 </div>
+
+
 
             </div>
             <!-- Grid column -->

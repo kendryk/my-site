@@ -19,18 +19,18 @@ Dans tous les cas, votre thème devra utiliser les fonctionnalités suivantes de
 
 Si vous choisissez de réaliser votre portfolio, voici quelques idées de contenus à intégrer :
 
- [x] Affichage des projets réalisés organisés par catégories.
+    [x] Affichage des projets réalisés organisés par catégories.
 
- Utiliser éventuellement la librairie JS isotope pour les afficher côté front.
+    [x] Utiliser éventuellement la librairie JS isotope pour les afficher côté front.
 
-[X] Affichage de la liste des services que vous proposez
-(développement de site internet, appli mobile, référencement...).
+    [X] Affichage de la liste des services que vous proposez
+        (développement de site internet, appli mobile, référencement...).
 
-[X]  Possibilité de télécharger votre CV.
+    [X]  Possibilité de télécharger votre CV.
 
-[X]  Affichage de témoignages clients.
+    [X]  Affichage de témoignages clients.
 
-[ ]  Liste des réseaux sociaux.
+    [ ]  Liste des réseaux sociaux.
 
 Vous pouvez vous inspirer de  ces templates :
 https://themeforest.net/category/site-templates/personal

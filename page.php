@@ -22,7 +22,8 @@
     <section class="row my-5"></section>
     <section class="row my-5"></section>
     <section class="row my-5"></section>
-
+    <section class="row my-5"></section>
+    <section class="row my-5"></section>
 </div>
 
 <?php get_footer(); ?>

@@ -1,10 +1,7 @@
-<article class="card mb-3 mx-1 d-flex align-content-around" style="max-width: 540px;">
-    <div class="d-flex ">
+<article class="card-size mb-3 mx-1">
+    <div class="d-flex p-2 ">
         <div>
-            <div class="picture-thumbnail" style="background-image:url(<?php the_post_thumbnail_url(); ?>)">
-
-            </div>
-
+            <div class="picture-thumbnail" style="background-image:url(<?php the_post_thumbnail_url(); ?>)"></div>
         </div>
 
         <div>
@@ -18,11 +15,12 @@
 
     </div>
 
-    <div class="card-footer d-flex justify-content-around">
+        <div class="d-flex justify-content-around p-2 bg-darkblue dezoom">
         <?php display_terms_btn(get_the_ID(), 'projectType'); ?>
         <hr>
-        <a href="<?php the_permalink(); ?>" class="btn btn-primary">
+        <a href="<?php the_permalink(); ?>" class=" btn btn-primary">
             Voir plus
-        </a></div>
+        </a>
+        </div>
 
 </article>

@@ -98,8 +98,6 @@ function experience_register_fields() {
             </div><!-- /.block -->
 
 
-
-
             <?php while ($querry->have_posts()){$querry->the_post(); ?>
 
                 <?php $date_start = carbon_get_the_post_meta('crb_event_start_date'); ?>

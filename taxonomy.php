@@ -48,20 +48,21 @@
                                 <?php else : ?>
                                     <div class="col"> <h5>Photos :</h5> </div>
                                     <div class="picture-box ">
+
+
                                         <?php foreach ( $slides as $slide ) {
                                             $img_url = wp_get_attachment_image_src($slide['image'],$size = 'imgag');
                                             $img_slide = $img_url[0];?>
 
-                                            <img id="myImg" src="<?= $img_slide; ?>"  class="img_size" alt="">
+                                            <img src="<?= $img_slide; ?>"
+                                                 class="img_size"
+                                                 alt="">
 
-                                            <!-- The Modal -->
-                                            <div id="myModal" class="modal">
-                                                <span class="close">&times;</span>
-                                                <img class="modal-content" id="img01">
-                                                <div id="caption"></div>
-                                            </div>
 
-                                        <?php }; ?>
+
+                                        <?php
+
+                                        }; ?>
 
                                     </div>
 

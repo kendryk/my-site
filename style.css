@@ -13,6 +13,18 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+h1::first-letter,
+h2::first-letter,
+h3::first-letter,
+h4::first-letter,
+h5::first-letter,
+h6::first-letter,
+p::first-letter
+{
+    text-transform: uppercase;
+}
+
+
 .header-picture {
     background: #444  center / cover no-repeat ;
     background-blend-mode: overlay;
@@ -24,7 +36,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*-----------------------------blog service*/
 .service_area {
     background: #011135;
-    padding: 4rem 1rem;
+    padding: 4rem;
     color: lightyellow;
 }
 
@@ -33,6 +45,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
     border-radius: 5px;
     margin: 0.5rem;
     padding: 0 1rem 1rem 1rem;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.single_service:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .single_service_title {
@@ -58,6 +78,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     height: 100px;
 }
 
+
 /*------content card--*/
 .picture-thumbnail{
     background: center / cover no-repeat;
@@ -70,13 +91,25 @@ Use it to make something cool, have fun, and share what you've learned with othe
     padding: 40%;
     margin-bottom: 2rem;
 }
+.card-size{
+    border-radius: 15px;
+    box-shadow: -7px -7px 17px rgba(70, 70, 70, 0.06),
+    7px 7px 17px rgba(70, 70, 70, 0.12);
+    width: 100px;
+
+}
+.bg-darkblue{
+    background:#011135 ;
+}
 
 
-/*-----------------------------single page project*/
+
+
+
+    /*-----------------------------single page project*/
 .service_project{
     background:  white;
-    padding-bottom: 5rem;
-    padding-top: 5rem;
+    padding: 5rem;
     color: darkblue;
 }
 .picture {
@@ -147,14 +180,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
     padding: 0.3rem;
     margin: 0.2rem;
     width: 125px;
-}
-#myImg {
-    border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-#myImg:hover {opacity: 0.7;}
+.img_size:hover {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
@@ -180,7 +210,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 /* Caption of Modal Image */
-#caption {
+.caption {
     margin: auto;
     display: block;
     width: 80%;
@@ -192,7 +222,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 /* Add Animation */
-.modal-content, #caption {
+.modal-content, .caption {
     animation-name: zoom;
     animation-duration: 0.6s;
 }
@@ -203,18 +233,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 /* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
 
-.close:hover,
-.close:focus {
+
+.fermeture:hover,
+.fermeture:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
@@ -231,10 +253,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*slick*/
 .slick-arrow::before {
     color: #0a58ca;
+    font-size: 2.2rem;
+
 }
 
 .slick-slide{
     margin: 1rem;
+}
+#slick-slide-control10::before,#slick-slide-control11::before,#slick-slide-control12::before{
+    color:white;
+    font-size: 1.5rem;
+
 }
 
 
@@ -265,7 +294,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .content{
     border-left: 1px solid #ddd;
-
     margin: 1rem 0 1rem 1rem;
     padding: 1rem 2rem 1rem 1rem ;
 }
@@ -274,6 +302,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
     color: #9b9b9b;
 
 }
-.myContent p{
 
+/*PortFolio*/
+
+
+a:link
+{
+    text-decoration:none;
+
+}
+.img-size{
+    height: 11rem;
+}
+
+.grid-item{
+    width: 25%;
 }

@@ -8,9 +8,10 @@ require_once( 'vendor/autoload.php' );
 //cpt
 require_once __DIR__ . '/cpt/experience.php';
 require_once __DIR__ . '/cpt/langages.php';
-require_once __DIR__ . '/cpt/testimony.php';
 require_once __DIR__ . '/cpt/project.php';
 require_once __DIR__ . '/cpt/service.php';
+require_once __DIR__ . '/cpt/social.php';
+require_once __DIR__ . '/cpt/testimony.php';
 //widgets
 require_once __DIR__ . '/Widgets/ContactWidget.php';
 
@@ -67,9 +68,11 @@ function monsite_enqueue_styles() {
         wp_enqueue_style('slick-theme-css', get_template_directory_uri() . '/slick/slick-theme.css', ['slick-css']);
         wp_enqueue_style('fontawesome-css', get_template_directory_uri() . '/fontawesome/css/all.css', ['slick-css']);
 
+
+
        wp_enqueue_style('theme-style',
             get_template_directory_uri() . '/style.css',
-            ['bootstrap-css', 'slick-css', 'slick-theme-css'],
+            ['bootstrap-css', 'slick-css', 'slick-theme-css','fontawesome-css'],
             wp_get_theme()->get('Version')
         );
         //----Autre Chargement!!
@@ -87,12 +90,19 @@ function monsite_enqueue_styles() {
         wp_get_theme()->get('Version'),
         true // Charger le fichier JS avant la fermeture du body
     );
-    wp_enqueue_script('script-js',
-        get_template_directory_uri() . '/script.js',
-        ['jquery', 'bootstrap-js', 'slick-js'],
+    wp_enqueue_script('isotope-pkgd-js',
+        get_template_directory_uri() . '/assets/js/isotope.pkgd.js',
+        ['jquery'],
         wp_get_theme()->get('Version'),
         true // Charger le fichier JS avant la fermeture du body
     );
+    wp_enqueue_script('script-js',
+        get_template_directory_uri() . '/script.js',
+        ['jquery', 'bootstrap-js', 'slick-js','isotope-pkgd-js'],
+        wp_get_theme()->get('Version'),
+        true // Charger le fichier JS avant la fermeture du body
+    );
+
 }
 
 
@@ -185,9 +195,10 @@ function display_terms_btn(int $id, string $taxonomy) {
     $terms = get_the_terms($id, $taxonomy); // Récupérer la liste des valeurs d'une taxonomie pour un type de contenu
     if (is_array($terms)) {
         foreach ($terms as $term) {
-            echo '<a href="' . get_term_link($term) . '" class="btn btn-info mx-1">
+            echo '<a href="' . get_term_link($term) . '" class="btn btn-info m-1">
                         ' . $term->name . '
                     </a>'
+
             ;
         }
     }

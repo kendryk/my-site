@@ -6,10 +6,15 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit0d71b88c69127eebc8cc4e6984f303a4
 {
+    public static $files = array (
+        '1db9a602f20508d50525f9dad168786f' => __DIR__ . '/..' . '/htmlburger/carbon-field-icon/core/bootstrap.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'C' => 
         array (
             'Carbon_Fields\\' => 14,
+            'Carbon_Field_Icon\\' => 18,
         ),
     );
 
@@ -17,6 +22,10 @@ class ComposerStaticInit0d71b88c69127eebc8cc4e6984f303a4
         'Carbon_Fields\\' => 
         array (
             0 => __DIR__ . '/..' . '/htmlburger/carbon-fields/core',
+        ),
+        'Carbon_Field_Icon\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/htmlburger/carbon-field-icon/core',
         ),
     );
 

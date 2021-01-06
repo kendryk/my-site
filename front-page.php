@@ -31,7 +31,7 @@
                         </div>
 
                 </div>
-                <section id="services" class="row">
+                <section id="services" class="d-flex flex-wrap justify-content-center ">
                         <!-- Afficher les services -->
                         <?php
                         $service = new WP_Query([
@@ -61,9 +61,9 @@
                 </div>
             </div>
 
-            <section id="last-Projects">
-                    <!-- Afficher la liste des derniers Projects -->
-<!--                todo ajouter un slide sur la liste des projets-->
+            <section id="last-Projects" >
+                    <!--DO Afficher la liste des derniers Projects -->
+<!--                DO ajouter un slide sur la liste des projets-->
                     <?php
                     $query = new WP_Query([
                         'post_type' => 'project',
