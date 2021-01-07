@@ -84,7 +84,10 @@ function project_register_fields() {
             Field::make('complex', 'crb_slides', 'Slides images')
                 ->set_layout( 'tabbed-horizontal' )
                 ->add_fields( [
-                    Field::make( 'image', 'image', 'Image' ),
+                    Field::make(
+                            'image',
+                            'image',
+                            'Image' ),
                 ]),
 
 
@@ -93,12 +96,15 @@ function project_register_fields() {
                 ->setup_labels([
                     'plural_name' => 'Langages',
                     'singular_name' => 'Langage',
+
+
                 ])
                 ->add_fields([
-
                     Field::make('association', 'langage', 'Langages')
                         ->set_types([
-                            ['type' => 'post', 'post_type' => 'langage']
+                            [
+                                    'type' => 'post',
+                                    'post_type' => 'langage']
                         ])
                         ->set_min(1)
                         ->set_max(1),
@@ -134,49 +140,80 @@ function project_register_fields() {
                 'posts_per_page'=> -1
             ]); ?>
 
-
+<!--                Création des boutons isotopes-->
             <div class="button-group filter-button-group">
-                <button data-filter="*" class="btn btn-success">show all</button>
-
-            <?php
-                $types = get_terms([ 'taxonomy' => 'projectType','hide_empty' => false ]);?>
-
-                <?php foreach( $types as $type ): ?>
-
-                <button data-filter=".<?=$type->slug; ?>"  class="btn btn-info"><?=$type->name; ?></button>
-
+            <button data-filter="*" class="btn btn-success m-1">Show all</button>
+<!--                boucle avec wp query pour récupérer donnée des langages-->
+                <?php $query =new WP_Query(['post_type'=> 'langage', 'posts_per_page'=> -1]); ?>
+                <?php foreach( $query->posts as $post ): ?>
+                    <?php $post_title=$post->post_title; ?>
+                    <?php $post_name=$post->post_name; ?>
+                    <button data-filter=".<?=$post_name; ?>"  class="btn btn-info m-1"><?=$post_title; ?></button>
                 <?php endforeach; ?>
+                <?php wp_reset_postdata(); // A mettre après une boucle avec WP_Query ?>
 
             </div>
 
+
+            <div class="button-group filter-button-group">
+                <button data-filter="*" class="btn btn-success m-1">Show all</button>
+            <?php
+                $types = get_terms([ 'taxonomy' => 'projectType','hide_empty' => false ]);?>
+                <?php foreach( $types as $type ): ?>
+
+                <button data-filter=".<?=$type->slug; ?>" class="btn btn-info m-1"><?=$type->name; ?></button>
+
+                <?php endforeach; ?>
+            </div>
+
+
+            <!--                Création des grid isotopes-->
             <div class="grid">
                 <?php while($project->have_posts()) : $project->the_post(); ?>
 
-                    <a class="grid-item <?php $types = get_the_terms(get_the_ID(),'projectType');
+                    <a class="grid-item
+
+                    <?php
+//                    boucle pour les langages pour chaque projets
+                    $langages = carbon_get_the_post_meta( 'langages');
+                    foreach ($langages as $langage){
+                    $current_langage = get_post($langage['langage'][0]['id']);
+                    echo $current_langage->post_name,' ';}
+
+                     $types = get_the_terms(get_the_ID(),'projectType');
                     foreach ($types as $type){
-                        echo$type->slug,' ';
-                    } ?>  " href="<?php the_permalink(); ?>">
+                        echo$type->slug,' ';}
+
+                    ?>
+
+                    " href="<?php the_permalink(); ?>">
 
                         <div class="card m-2 text-center ">
-
                             <div>
                                 <div class=" img-size p-5 mb-3"
                                      style="background-image:url('<?php the_post_thumbnail_url(); ?>')">
-
                                 </div>
                             </div>
-
                             <h3><?php the_title(); ?></h3>
+                            <div class="d-flex justify-content-around">
+
+<!--                                    boucle sur les langages(image) par projets-->
+                            <?php foreach ($langages as $langage) {
+                                 $current_langage = get_post($langage['langage'][0]['id']);
+                                 $post_id=$current_langage->ID;
+                                 echo get_the_post_thumbnail( $post_id, 'imgag' ) ;
+                            } ?>
+
                         </div>
-
-
-
+                        </div>
                     </a>
 
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); // A mettre après une boucle avec WP_Query ?>
 
             </div>
+
+
             <?php
 
         } );

@@ -44,6 +44,13 @@ function translations_cpt_init(){
 		'supports' => ['title',  'thumbnail'],
 	]);
 
+    // Ajouter une taxonomie pour organiser les langages par types
+    register_taxonomy('langageType', ['langage'], [
+        'label' => 'Type de langage',
+        'rewrite' => ['slug' => 'langageType'],
+        'hierarchical' => true
+    ]);
+
 
 
 
