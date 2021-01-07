@@ -3,16 +3,37 @@
 
     <!-- Footer Links -->
     <section class="container text-center text-md-left">
-
+	    <?php if (has_nav_menu('menu-footer')): ?>
         <!-- Footer links -->
-        <article class="row text-center text-md-left mt-3 pb-3">
+        <article class="col-12 row text-center text-md-left mt-3 pb-3">
 
             <!-- Grid column -->
-            <div class="col-2  mt-3">
+            <div class="col-2 d-flex flex-column justify-content-around align-items-center ">
                <?php the_custom_logo(); ?>
+
+            </div>
+            <!--   Affiche le menu menu-footer -->
+            <div class="col-5  ">
+            <nav class=" text-white " >
+                <div>
+			        <?php wp_nav_menu([
+				        'theme_location' => 'menu-footer',
+				        'depth'             => 2,
+				        'container'         => 'div',
+				        'container_class'   => 'd-flex justify-content-end ',
+				        'container_id'      => '',
+				        'menu_class'        => 'list-unstyled',
+				        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+				        'walker'            => new WP_Bootstrap_Navwalker(),
+			        ]); ?>
+
+                </div>
             </div>
 
-            <div class="col-10 d-flex justify-content-end ">
+
+
+
+            <div class="col-5 d-flex justify-content-end ">
                 <?php if (is_active_sidebar('footer-sidebar')): ?>
                     <?php dynamic_sidebar('footer-sidebar'); ?>
                 <?php endif; ?>
@@ -33,7 +54,7 @@
                 <!--Copyright-->
                 <p class="text-center text-md-left">© <?= date('Y'); ?> Copyright:
                     <a href="">
-                        <strong>  <?php the_author(); ?>.com</strong>
+                        <strong>  <?php bloginfo('description'); ?></strong>
                     </a>
                 </p>
 
@@ -92,7 +113,7 @@
 
 
 
-
+<?php endif; ?>
 <?php wp_footer(); ?>
 
 </body>

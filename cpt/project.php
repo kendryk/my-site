@@ -190,11 +190,12 @@ function project_register_fields() {
 
                         <div class="card m-2 text-center ">
                             <div>
-                                <div class=" img-size p-5 mb-3"
+                                <div class=" img-size3 py-5"
                                      style="background-image:url('<?php the_post_thumbnail_url(); ?>')">
+                                    <h3><?php the_title(); ?></h3>
                                 </div>
                             </div>
-                            <h3><?php the_title(); ?></h3>
+
                             <div class="d-flex justify-content-around">
 
 <!--                                    boucle sur les langages(image) par projets-->

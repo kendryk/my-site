@@ -126,7 +126,7 @@ function monsite_enqueue_styles() {
 add_action('after_setup_theme', 'monsite_register_menu');
 function monsite_register_menu() {
     register_nav_menu('menu-top', 'Menu principal');
-    register_nav_menu('footer', 'Pied de page');
+    register_nav_menu('menu-footer', 'Pied de page');
 }
 
 //--------------------------------function logo

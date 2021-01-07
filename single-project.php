@@ -42,7 +42,7 @@ $langages = carbon_get_the_post_meta('langages');
                         <?php else : ?>
                             <h5>Quelques images:</h5>
 
-                        <div class="picture-box ">
+                        <div>
 
                             <?php $i = 0; ?>
 

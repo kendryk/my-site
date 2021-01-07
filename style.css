@@ -24,6 +24,17 @@ p::first-letter
     text-transform: uppercase;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+
+}
+
+a:link
+{
+    text-decoration:none;
+
+}
 
 .header-picture {
     background: #444  center / cover no-repeat ;
@@ -174,6 +185,9 @@ p::first-letter
 
 /*  TAXONOMY */
 
+
+
+
 .img_size{
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -185,6 +199,18 @@ p::first-letter
 }
 
 .img_size:hover {opacity: 0.7;}
+
+.img_size2{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    width: 125px;
+
+}
+
+
+
 
 /* The Modal (background) */
 .modal {
@@ -306,15 +332,25 @@ p::first-letter
 /*PortFolio*/
 
 
-a:link
-{
-    text-decoration:none;
+
+.img-size3{
+    height: 10rem;
+    background: #444  center / cover no-repeat ;
+    background-blend-mode: overlay;
+    color: white;
 
 }
-.img-size{
-    height: 11rem;
+.img_size3:hover {
+    opacity: 0.7;
 }
 
 .grid-item{
     width: 25%;
+}
+
+
+/*FOOTER*/
+
+.menu-menu-de-pied-de-page-container{
+
 }

@@ -47,30 +47,19 @@
                                 <?php if (empty ($slides)): ?>
                                 <?php else : ?>
                                     <div class="col"> <h5>Photos :</h5> </div>
-                                    <div class="picture-box ">
-
-
+                                    <div>
                                         <?php foreach ( $slides as $slide ) {
                                             $img_url = wp_get_attachment_image_src($slide['image'],$size = 'imgag');
                                             $img_slide = $img_url[0];?>
 
                                             <img src="<?= $img_slide; ?>"
-                                                 class="img_size"
+                                                 class="img_size2"
                                                  alt="">
-
-
-
                                         <?php
-
                                         }; ?>
-
                                     </div>
 
-
                                 <?php endif; ?>
-
-
-
 
                                 <hr class=" p-2 my-2">
                                 <a href="<?php the_permalink(); ?>" class="btn btn-primary">Voir plus</a>

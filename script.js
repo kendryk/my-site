@@ -18,8 +18,6 @@ jQuery(function ($){
     }
 
 
-
-
     $('#testimonies').slick({
         dots: true,
         infinite: true,
@@ -29,7 +27,7 @@ jQuery(function ($){
         autoplaySpeed: 2000,
         adaptiveHeight: true
     });
-
+//-----------------------------------------------------------------------------
     // Get the modal
     let count= document.getElementsByClassName('img_size').length;
 

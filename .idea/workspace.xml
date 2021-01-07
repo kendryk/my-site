@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed1889ef-3a36-4ed6-99d4-7acb2d10955e" name="Default Changelist" comment="" />
+    <list default="true" id="ed1889ef-3a36-4ed6-99d4-7acb2d10955e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/monsite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/monsite.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpt/project.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpt/project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single-project.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxonomy.php" beforeDir="false" afterPath="$PROJECT_DIR$/taxonomy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/header/header_navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/header_navbar.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/htmlburger/carbon-fields" />
+      <path value="$PROJECT_DIR$/vendor/htmlburger/carbon-field-icon" />
+      <path value="$PROJECT_DIR$/../../../../cookingchef" />
+    </include_path>
   </component>
   <component name="ProjectId" id="1lnERUndZu89izubc3NeccHSwQo" />
   <component name="ProjectViewState">
@@ -42,24 +91,55 @@
       <option name="presentableId" value="Default" />
       <updated>1608224453019</updated>
       <workItem from="1608224455533" duration="10592000" />
+      <workItem from="1610048652557" duration="4987000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="434" y="245" key="#Composer" timestamp="1610049079091">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="434" y="245" key="#Composer/0.0.1366.728/1366.-330.1280.984@0.0.1366.728" timestamp="1610049079091" />
+    <state x="428" y="7" key="#PHP" timestamp="1610049234531">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="428" y="7" key="#PHP/0.0.1366.728/1366.-330.1280.984@0.0.1366.728" timestamp="1610049234531" />
+    <state x="526" y="289" key="#WordPress" timestamp="1610049087285">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="526" y="289" key="#WordPress/0.0.1366.728/1366.-330.1280.984@0.0.1366.728" timestamp="1610049087285" />
     <state x="539" y="287" key="NewPhpFileDialog" timestamp="1608276847177">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="539" y="287" key="NewPhpFileDialog/0.0.1366.728/1366.-330.1280.984@0.0.1366.728" timestamp="1608276847177" />
-    <state x="199" y="10" key="SettingsEditor" timestamp="1608276565078">
+    <state x="199" y="10" key="SettingsEditor" timestamp="1610049216025">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="199" y="10" key="SettingsEditor/0.0.1366.728/1366.-330.1280.984@0.0.1366.728" timestamp="1608276565078" />
+    <state x="199" y="10" key="SettingsEditor/0.0.1366.728/1366.-330.1280.984@0.0.1366.728" timestamp="1610049216024" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1608234170608">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.-330.1280.984@0.0.1366.728" timestamp="1608234170608" />
+    <state x="508" y="279" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610053654351">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="508" y="279" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.-330.1280.984@0.0.1366.728" timestamp="1610053654351" />
+  </component>
+  <component name="WordPressConfiguration" enabled="true">
+    <wordpressPath>C:\MAMP\htdocs\dcdev5\wordpress\cookingchef</wordpressPath>
   </component>
 </project>
