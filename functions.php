@@ -185,7 +185,7 @@ function monsite_register_sidebars() {
             'id' => 'footer-sidebar',
             'name' => 'Page footer',
             'description' => 'Widget affichés sur le footer' ,
-            'before_widget' => '<div id="%1$s" class="widget %2$s mx-3">',
+            'before_widget' => '<div id="%1$s" class="widget %2$s ">',
             'before_title' => '<h3>',
             'after_title' => '</h3> <div >',
             'after_widget'  => '</div> </div >',

@@ -19,19 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed1889ef-3a36-4ed6-99d4-7acb2d10955e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/monsite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/monsite.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="ed1889ef-3a36-4ed6-99d4-7acb2d10955e" name="Default Changelist" comment="finaliter du wp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cpt/project.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpt/project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single-project.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-project.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taxonomy.php" beforeDir="false" afterPath="$PROJECT_DIR$/taxonomy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-parts/header/header_navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/header/header_navbar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +82,16 @@
       <option name="presentableId" value="Default" />
       <updated>1608224453019</updated>
       <workItem from="1608224455533" duration="10592000" />
-      <workItem from="1610048652557" duration="4987000" />
+      <workItem from="1610048652557" duration="6129000" />
     </task>
+    <task id="LOCAL-00001" summary="finaliter du wp">
+      <created>1610053710845</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610053710845</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +107,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finaliter du wp" />
+    <option name="LAST_COMMIT_MESSAGE" value="finaliter du wp" />
   </component>
   <component name="WindowStateProjectService">
     <state x="434" y="245" key="#Composer" timestamp="1610049079091">
@@ -134,6 +137,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.-330.1280.984@0.0.1366.728" timestamp="1608234170608" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1610053719415">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.-330.1280.984@0.0.1366.728" timestamp="1610053719415" />
     <state x="508" y="279" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610053654351">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

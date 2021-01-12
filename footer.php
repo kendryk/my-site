@@ -14,20 +14,20 @@
             </div>
             <!--   Affiche le menu menu-footer -->
             <div class="col-5  ">
-            <nav class=" text-white " >
-                <div>
-			        <?php wp_nav_menu([
-				        'theme_location' => 'menu-footer',
-				        'depth'             => 2,
-				        'container'         => 'div',
-				        'container_class'   => 'd-flex justify-content-end ',
-				        'container_id'      => '',
-				        'menu_class'        => 'list-unstyled',
-				        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-				        'walker'            => new WP_Bootstrap_Navwalker(),
-			        ]); ?>
-
-                </div>
+<!--            <nav class=" text-white " >-->
+<!--                <div>-->
+<!--			        --><?php //wp_nav_menu([
+//				        'theme_location' => 'menu-footer',
+//				        'depth'             => 2,
+//				        'container'         => 'div',
+//				        'container_class'   => 'd-flex justify-content-end ',
+//				        'container_id'      => '',
+//				        'menu_class'        => 'list-unstyled',
+//				        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+//				        'walker'            => new WP_Bootstrap_Navwalker(),
+//			        ]); ?>
+<!---->
+<!--                </div>-->
             </div>
 
 

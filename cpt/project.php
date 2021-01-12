@@ -151,12 +151,11 @@ function project_register_fields() {
                     <button data-filter=".<?=$post_name; ?>"  class="btn btn-info m-1"><?=$post_title; ?></button>
                 <?php endforeach; ?>
                 <?php wp_reset_postdata(); // A mettre après une boucle avec WP_Query ?>
-
             </div>
-
+            <hr>
 
             <div class="button-group filter-button-group">
-                <button data-filter="*" class="btn btn-success m-1">Show all</button>
+
             <?php
                 $types = get_terms([ 'taxonomy' => 'projectType','hide_empty' => false ]);?>
                 <?php foreach( $types as $type ): ?>
@@ -165,7 +164,7 @@ function project_register_fields() {
 
                 <?php endforeach; ?>
             </div>
-
+            <hr>
 
             <!--                Création des grid isotopes-->
             <div class="grid">
@@ -188,7 +187,7 @@ function project_register_fields() {
 
                     " href="<?php the_permalink(); ?>">
 
-                        <div class="card m-2 text-center ">
+                        <div class="card card-zoom m-2 text-center ">
                             <div>
                                 <div class=" img-size3 py-5"
                                      style="background-image:url('<?php the_post_thumbnail_url(); ?>')">
